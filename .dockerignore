@@ -1,0 +1,7 @@
+/vendor/
+/tools/
+/.gitignore
+/.dockerignore
+/composer.lock
+/compose.yml
+/Dockerfile
