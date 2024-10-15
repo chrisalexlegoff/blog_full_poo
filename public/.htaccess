@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?page=$1
+
+# Source : https://httpd.apache.org/docs/2.4/fr/howto/htaccess.html
+# http://monsite.com/toto
+# toto => $1
+# http://monsite.com/index.php?page=toto

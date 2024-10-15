@@ -8,11 +8,11 @@ services:
       - ./:/var/www/html/
       # - '/var/www/html/vendor' # Prevents first volume from overwriting vendor directory.
     ports:
-      - '8000:80'
+      - '8030:80'
 
   webblogfullpoodb:
     image: mariadb:latest
-    container_name: webblogfullpoo
+    container_name: webblogfullpoodb
     ports:
       - '3315:3306'
     environment:
@@ -27,7 +27,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     ports:
-      - '8001:80'
+      - '8031:80'
     environment:
       - PMA_HOST=${MYSQL_HOST}
     depends_on:
